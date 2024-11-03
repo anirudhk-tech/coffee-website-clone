@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import ThemeProviderWrapper from "./components/common/themeProviderWrapper";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
+
+const Montserrat = localFont({
+  src: "./fonts/Montserrat-Regular.ttf",
+  variable: "--font-montserrat",
   weight: "100 900",
 });
 
@@ -23,13 +20,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <ThemeProviderWrapper>
+          <body
+            className={Montserrat.variable}
+          >
+            {children}
+          </body>
+        </ThemeProviderWrapper>
     </html>
   );
 }
