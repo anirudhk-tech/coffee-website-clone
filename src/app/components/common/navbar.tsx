@@ -1,6 +1,6 @@
 import { useTheme, AppBar, Box } from "@mui/material";
 import Image from "next/image";
-import Logo from "@/../public/logo.png";
+import Logo from "@/../public/logo.png"
 import { NavbarCategory } from "./navbarCategory";
 import { ModeChangeButton } from "../modeChangeButton";
 
@@ -41,7 +41,7 @@ export const Navbar = () => {
            >
                 <NavbarCategory title="Home" route="/"/>
                 <NavbarCategory title="Projects" route="/projects"/>
-                <NavbarCategory title="About" route="/about"/>
+                <NavbarCategory title="What is Coffee?" route="/about"/>
                 <NavbarCategory title="Contact" route="/contact"/>
            </Box>
            <ModeChangeButton/>
