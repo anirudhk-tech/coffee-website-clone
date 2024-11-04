@@ -23,7 +23,7 @@ export const NavbarCategory = ({ title, route }: { title: string, route: string}
                     fontFamily: "--font-montserrat",
                     fontSize: {
                         xs: "11px",
-                        sm: "13px",
+                        sm: "11px",
                         md: "20px",
                         lg: "30px",
                         xl: "40px",

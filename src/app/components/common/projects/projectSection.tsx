@@ -38,9 +38,9 @@ export const ProjectSection = ({ title, description}: { title: string, descripti
                     fontSize: {
                         xs: "20px",
                         sm: "30px",
-                        md: "30px",
-                        lg: "30px",
-                        xl: "30px",
+                        md: "40px",
+                        lg: "50px",
+                        xl: "50px",
                     },
                     fontWeight: 550,
                     color: theme.palette.primary.main,
@@ -68,7 +68,13 @@ export const ProjectSection = ({ title, description}: { title: string, descripti
         >
             <Typography sx={{
                 fontFamily: "--font-montserrat",
-                fontSize: "15px",
+                fontSize: {
+                    xs: "15px",
+                    sm: "15px",
+                    md: "30px",
+                    lg: "40px",
+                    xl: "40px",
+                },
                 width: {
                     xs: "90vw",
                     sm: "70vw",

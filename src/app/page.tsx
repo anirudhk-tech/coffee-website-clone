@@ -46,7 +46,7 @@ export default function Home() {
           flexDirection: "column",
         }}>
           <motion.div 
-          animate={ width > 400 ? { x: 20, opacity: 1.0 } : { opacity: 1.0 }} 
+          animate={ width > 600 ? { x: 20, opacity: 1.0 } : { opacity: 1.0 }} 
           initial={{ x: 0, opacity: 0.0 }}
           transition={{ duration: 1.0 }}
           >
@@ -108,30 +108,12 @@ export default function Home() {
               onMouseEnter={() => setSeeOurWorkHovered(true)}
               onMouseLeave={() => setSeeOurWorkHovered(false)}
               sx={{
-                height: {
-                  xs: '7vh', // Height adjustment for phone size
-                  sm: '10vh',
-                  md: '10vh',
-                  lg: '10vh',
-                  xl: '10vh',
-                },
-                width: { 
-                  xs: '120px', 
-                  sm: '150px', 
-                  md: '150px', 
-                  lg: '170px', 
-                  xl: '200px' 
-                },
+                height: "clamp(7vh, 10vh, 15vh)",
+                width: "clamp(120px, 150px, 200px)",
                 backgroundColor: seeOurWorkHovered ? theme.palette.primary.light : theme.palette.primary.main,
                 color: theme.palette.text.button,
                 fontFamily: "--font-montserrat",
-                fontSize: {
-                  xs: "10px",
-                  sm: "15px",
-                  md: "20px",
-                  lg: "20px",
-                  xl: "20px",
-                },
+                fontSize: "clamp(10px, 15px, 20px)",
               }}
               >See our work</Button>
             </Link>
