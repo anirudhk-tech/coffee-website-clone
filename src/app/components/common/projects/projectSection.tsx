@@ -68,7 +68,13 @@ export const ProjectSection = ({ title, description}: { title: string, descripti
         >
             <Typography sx={{
                 fontFamily: "--font-montserrat",
-                fontSize: "15px",
+                fontSize: {
+                    xs: "15px",
+                    sm: "20px",
+                    md: "30px",
+                    lg: "40px",
+                    xl: "40px",
+                },
                 width: {
                     xs: "90vw",
                     sm: "70vw",

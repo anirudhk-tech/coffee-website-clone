@@ -37,13 +37,25 @@ export default function About() {
                 >
                     <Typography sx={{
                         fontFamily: "--font-montserrat",
-                        fontSize: "30px",
+                        fontSize: {
+                            xs: "20px",
+                            sm: "30px",
+                            md: "40px",
+                            lg: "50px",
+                            xl: "50px",
+                        },
                         fontWeight: 500,
                         color: theme.palette.primary.main,
                     }}>Why Coffee?</Typography>
                     <Typography sx={{
                         fontFamily: "--font-montserrat",
-                        fontSize: "15px",
+                        fontSize: {
+                            xs: "15px",
+                            sm: "15px",
+                            md: "30px",
+                            lg: "40px",
+                            xl: "40px",
+                        },
                         width: {
                             xs: "90vw",
                             sm: "70vw",
@@ -65,14 +77,26 @@ export default function About() {
                 >
                     <Typography sx={{
                         fontFamily: "--font-montserrat",
-                        fontSize: "30px",
+                        fontSize: {
+                            xs: "20px",
+                            sm: "30px",
+                            md: "40px",
+                            lg: "50px",
+                            xl: "50px",
+                        },
                         fontWeight: 500,
                         color: theme.palette.primary.main,
                         marginTop: "5vh",
                     }}>What is built at Coffee?</Typography>
                     <Typography sx={{
                         fontFamily: "--font-montserrat",
-                        fontSize: "15px",
+                        fontSize: {
+                            xs: "15px",
+                            sm: "15px",
+                            md: "30px",
+                            lg: "40px",
+                            xl: "40px",
+                        },
                         width: {
                             xs: "90vw",
                             sm: "70vw",

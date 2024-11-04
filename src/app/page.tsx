@@ -115,23 +115,11 @@ export default function Home() {
                   lg: '10vh',
                   xl: '10vh',
                 },
-                width: { 
-                  xs: '120px', 
-                  sm: '150px', 
-                  md: '150px', 
-                  lg: '170px', 
-                  xl: '200px' 
-                },
+                width: "clamp(120px, 150px, 200px)",
                 backgroundColor: seeOurWorkHovered ? theme.palette.primary.light : theme.palette.primary.main,
                 color: theme.palette.text.button,
                 fontFamily: "--font-montserrat",
-                fontSize: {
-                  xs: "10px",
-                  sm: "15px",
-                  md: "20px",
-                  lg: "20px",
-                  xl: "20px",
-                },
+                fontSize: "clamp(10px, 15px, 20px)",
               }}
               >See our work</Button>
             </Link>
