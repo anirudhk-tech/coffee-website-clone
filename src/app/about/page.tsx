@@ -3,10 +3,15 @@
 import { useTheme, Box, Typography } from "@mui/material";
 import { Navbar } from "../components/common/navbar";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export default function About() {
     const theme = useTheme();
-    const width = window.innerWidth;
+    const [width, setWidth] = useState<number>(0);
+
+    useEffect(() => { // Waiting for component to mount
+        setWidth(window.innerWidth);
+      }, []);
 
     return (
         <Box

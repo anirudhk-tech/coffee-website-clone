@@ -2,7 +2,7 @@
 
 import { Box, Button, Typography, useTheme } from "@mui/material";
 import { Navbar } from "./components/common/navbar";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useCurrentNav } from "@/store/navStore";
 import { motion } from "framer-motion";
@@ -11,7 +11,11 @@ export default function Home() {
   const theme = useTheme();
   const [seeOurWorkHovered, setSeeOurWorkHovered] = useState<boolean>(false);
   const setCurrentCategory = useCurrentNav((state) => state.setCurrentCategory);
-  const width = window.innerWidth;
+  const [width, setWidth] = useState<number>(0);
+
+  useEffect(() => { // Waiting for component to mount
+    setWidth(window.innerWidth);
+  }, []);
   
   return (
     <Box
