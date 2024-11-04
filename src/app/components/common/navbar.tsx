@@ -2,10 +2,21 @@ import { useTheme, AppBar, Box } from "@mui/material";
 import Image from "next/image";
 import Logo from "@/../public/logo.png"
 import { NavbarCategory } from "./navbarCategory";
-import { ModeChangeButton } from "../modeChangeButton";
+import { ModeChangeButton } from "./modeChangeButton";
+import React from "react";
 
 export const Navbar = () => {
     const theme = useTheme();
+    const LogoComponent = React.memo(() => (
+    <Image 
+        src={Logo} 
+        alt={"Coffee logo"}
+        style={{
+            height: "10vh",
+            width: "10vh",
+        }}    
+    />)) // Memoizing the component to avoid unnecessary re-renders
+    LogoComponent.displayName = "LogoComponent"; // Setting display name to avoid ESlint error
 
     return (
         <AppBar 
@@ -21,14 +32,7 @@ export const Navbar = () => {
             alignItems: "center",
         }}
         >
-           <Image 
-           src={Logo} 
-           alt={"Coffee logo"}
-           style={{
-            height: "10vh",
-            width: "10vh",
-           }}
-           />
+           <LogoComponent/>
            <Box 
            sx={{ 
             display: "flex",

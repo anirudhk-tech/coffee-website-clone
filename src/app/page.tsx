@@ -4,10 +4,14 @@ import { Box, Button, Typography, useTheme } from "@mui/material";
 import { Navbar } from "./components/common/navbar";
 import { useState } from "react";
 import Link from "next/link";
+import { useCurrentNav } from "@/store/navStore";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const theme = useTheme();
   const [seeOurWorkHovered, setSeeOurWorkHovered] = useState<boolean>(false);
+  const setCurrentCategory = useCurrentNav((state) => state.setCurrentCategory);
+  const width = window.innerWidth;
   
   return (
     <Box
@@ -37,34 +41,46 @@ export default function Home() {
           flex: 1,
           flexDirection: "column",
         }}>
-          <Typography sx={{
-            color: theme.palette.primary.main,
-            fontFamily: "--font-montserrat",
-            fontSize: {
-              xs: "30px",
-              sm: "40px",
-              md: "50px",
-              lg: "60px",
-              xl: "70px",
-            },
-          }}>Building Software</Typography>
-          <Typography sx={{
-            color: theme.palette.primary.main,
-            fontFamily: "--font-montserrat",
-            fontSize: {
-              xs: "30px",
-              sm: "40px",
-              md: "50px",
-              lg: "60px",
-              xl: "70px",
-            },
-          }}>That Matters.</Typography>
+          <motion.div 
+          animate={ width > 400 ? { x: 20, opacity: 1.0 } : { opacity: 1.0 }} 
+          initial={{ x: 0, opacity: 0.0 }}
+          transition={{ duration: 1.0 }}
+          >
+            <Typography sx={{
+              color: theme.palette.primary.main,
+              fontFamily: "--font-montserrat",
+              fontSize: {
+                xs: "30px",
+                sm: "40px",
+                md: "50px",
+                lg: "60px",
+                xl: "70px",
+              },
+            }}>Building Software</Typography>
+            <Typography sx={{
+              color: theme.palette.primary.main,
+              fontFamily: "--font-montserrat",
+              fontSize: {
+                xs: "30px",
+                sm: "40px",
+                md: "50px",
+                lg: "60px",
+                xl: "70px",
+              },
+            }}>That Matters.</Typography>
+        </motion.div>
         </Box>
         <Box sx={{
           display: "flex",
           height: '30vh',
           flex: 1,
-          alignItems: "flex-end",
+          alignItems: {
+            xs: "flex-start",
+            sm: "flex-end",
+            md: "flex-end",
+            lg: "flex-end",
+            xl: "flex-end",
+          },
           justifyContent: {
             xs: "flex-start",
             sm: "flex-end",
@@ -74,39 +90,48 @@ export default function Home() {
           },
           paddingRight: "7vw", // Padding makes button position itself properly
         }}>
-          <Link href="/projects">
-            <Button 
-            variant="contained"
-            onMouseEnter={() => setSeeOurWorkHovered(true)}
-            onMouseLeave={() => setSeeOurWorkHovered(false)}
-            sx={{
-              height: {
-                xs: '7vh', // Height adjustment for phone size
-                sm: '10vh',
-                md: '10vh',
-                lg: '10vh',
-                xl: '10vh',
-              },
-              width: { 
-                xs: '120px', 
-                sm: '150px', 
-                md: '150px', 
-                lg: '170px', 
-                xl: '200px' 
-              },
-              backgroundColor: seeOurWorkHovered ? theme.palette.primary.light : theme.palette.primary.main,
-              color: theme.palette.text.button,
-              fontFamily: "--font-montserrat",
-              fontSize: {
-                xs: "10px",
-                sm: "15px",
-                md: "20px",
-                lg: "20px",
-                xl: "20px",
-              },
-            }}
-            >See our work</Button>
-          </Link>
+          <motion.div
+          animate={{ opacity: 1.0 }}
+          initial={{ opacity: 0.0 }}
+          transition={{ duration: 1.0 }}
+          >
+            <Link 
+            href="/projects"
+            onClick={() => setCurrentCategory("Projects")}
+            >
+              <Button 
+              variant="contained"
+              onMouseEnter={() => setSeeOurWorkHovered(true)}
+              onMouseLeave={() => setSeeOurWorkHovered(false)}
+              sx={{
+                height: {
+                  xs: '7vh', // Height adjustment for phone size
+                  sm: '10vh',
+                  md: '10vh',
+                  lg: '10vh',
+                  xl: '10vh',
+                },
+                width: { 
+                  xs: '120px', 
+                  sm: '150px', 
+                  md: '150px', 
+                  lg: '170px', 
+                  xl: '200px' 
+                },
+                backgroundColor: seeOurWorkHovered ? theme.palette.primary.light : theme.palette.primary.main,
+                color: theme.palette.text.button,
+                fontFamily: "--font-montserrat",
+                fontSize: {
+                  xs: "10px",
+                  sm: "15px",
+                  md: "20px",
+                  lg: "20px",
+                  xl: "20px",
+                },
+              }}
+              >See our work</Button>
+            </Link>
+          </motion.div>
         </Box>
       </Box>
     </Box>
