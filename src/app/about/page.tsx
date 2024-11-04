@@ -31,7 +31,7 @@ export default function About() {
                 overflowX: 'hidden', // Hides scroll bar in X axis on animations
             }}>
                 <motion.div
-                animate={width > 400 ? { opacity: 1, x: 20 } : { opacity: 1, x: 1 }}
+                animate={width > 600 ? { opacity: 1, x: 20 } : { opacity: 1, x: 1 }}
                 initial={{ opacity: 0, x: 0 }}
                 transition={{ duration: 1.0 }}
                 >
@@ -59,7 +59,7 @@ export default function About() {
                     </Typography>
                 </motion.div>
                 <motion.div
-                animate={width > 400 ? { opacity: 1, x: 20 } : { opacity: 1, x: 1 }} // Adjust animations based on screen size as to not go out of bounds
+                animate={width > 600 ? { opacity: 1, x: 20 } : { opacity: 1, x: 1 }} // Adjust animations based on screen size as to not go out of bounds
                 initial={{ opacity: 0, x: 0 }}
                 transition={{ duration: 1.0 }}
                 >

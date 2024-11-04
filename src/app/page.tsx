@@ -46,7 +46,7 @@ export default function Home() {
           flexDirection: "column",
         }}>
           <motion.div 
-          animate={ width > 400 ? { x: 20, opacity: 1.0 } : { opacity: 1.0 }} 
+          animate={ width > 600 ? { x: 20, opacity: 1.0 } : { opacity: 1.0 }} 
           initial={{ x: 0, opacity: 0.0 }}
           transition={{ duration: 1.0 }}
           >
