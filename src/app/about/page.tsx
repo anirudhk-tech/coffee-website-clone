@@ -10,8 +10,8 @@ export default function About() {
     const [width, setWidth] = useState<number>(0);
 
     useEffect(() => { // Waiting for component to mount
-      setWidth(window.innerWidth);
-    }, []);
+        setWidth(window.innerWidth);
+      }, []);
 
     return (
         <Box
@@ -37,25 +37,13 @@ export default function About() {
                 >
                     <Typography sx={{
                         fontFamily: "--font-montserrat",
-                        fontSize: {
-                            xs: "20px",
-                            sm: "30px",
-                            md: "40px",
-                            lg: "50px",
-                            xl: "50px",
-                        },
+                        fontSize: "clamp(20px, 40px, 100px)",
                         fontWeight: 500,
                         color: theme.palette.primary.main,
                     }}>Why Coffee?</Typography>
                     <Typography sx={{
                         fontFamily: "--font-montserrat",
-                        fontSize: {
-                            xs: "15px",
-                            sm: "15px",
-                            md: "30px",
-                            lg: "40px",
-                            xl: "40px",
-                        },
+                        fontSize: "clamp(10px, 25px, 100px)",
                         width: {
                             xs: "90vw",
                             sm: "70vw",
@@ -77,26 +65,14 @@ export default function About() {
                 >
                     <Typography sx={{
                         fontFamily: "--font-montserrat",
-                        fontSize: {
-                            xs: "20px",
-                            sm: "30px",
-                            md: "40px",
-                            lg: "50px",
-                            xl: "50px",
-                        },
+                        fontSize: "clamp(20px, 40px, 150px)",
                         fontWeight: 500,
                         color: theme.palette.primary.main,
                         marginTop: "5vh",
                     }}>What is built at Coffee?</Typography>
                     <Typography sx={{
                         fontFamily: "--font-montserrat",
-                        fontSize: {
-                            xs: "15px",
-                            sm: "15px",
-                            md: "30px",
-                            lg: "40px",
-                            xl: "40px",
-                        },
+                        fontSize: "clamp(10px, 25px, 100px)",
                         width: {
                             xs: "90vw",
                             sm: "70vw",

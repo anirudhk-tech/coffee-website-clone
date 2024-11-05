@@ -1,6 +1,6 @@
 import { useTheme, AppBar, Box } from "@mui/material";
 import Image from "next/image";
-import Logo from "@/../public/logo.png"
+import Logo from "@/../public/logo.png";
 import { NavbarCategory } from "./navbarCategory";
 import { ModeChangeButton } from "./modeChangeButton";
 import React from "react";
@@ -19,7 +19,8 @@ export const Navbar = () => {
     LogoComponent.displayName = "LogoComponent"; // Setting display name to avoid ESlint error
 
     return (
-        <AppBar 
+        <AppBar
+        data-testid="navbar" 
         position="static"
         elevation={0}
         sx={{

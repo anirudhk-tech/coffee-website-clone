@@ -2,7 +2,7 @@
 
 import { Box, Button, Typography, useTheme } from "@mui/material";
 import { Navbar } from "./components/common/navbar";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useCurrentNav } from "@/store/navStore";
 import { motion } from "framer-motion";
@@ -108,13 +108,7 @@ export default function Home() {
               onMouseEnter={() => setSeeOurWorkHovered(true)}
               onMouseLeave={() => setSeeOurWorkHovered(false)}
               sx={{
-                height: {
-                  xs: '7vh', // Height adjustment for phone size
-                  sm: '10vh',
-                  md: '10vh',
-                  lg: '10vh',
-                  xl: '10vh',
-                },
+                height: "clamp(7vh, 10vh, 15vh)",
                 width: "clamp(120px, 150px, 200px)",
                 backgroundColor: seeOurWorkHovered ? theme.palette.primary.light : theme.palette.primary.main,
                 color: theme.palette.text.button,

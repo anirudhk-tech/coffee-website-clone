@@ -21,7 +21,7 @@ export const ModeChangeButton = () => {
            }}
            >
             { currentTheme === "light" ?
-                <LightMode/> : <Nightlight/>
+                <LightMode data-testid="light-mode-icon"/> : <Nightlight data-testid="dark-mode-icon"/>
             }
         </Button>
     )

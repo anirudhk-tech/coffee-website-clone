@@ -2,7 +2,7 @@
 
 import { useTheme, Box } from "@mui/material";
 import { Navbar } from "../components/common/navbar";
-import { ProjectSection } from "../components/common/projects/projectSection";
+import { ProjectSection } from "../components/projects/projectSection";
 
 export default function Projects () {
     const theme = useTheme();
@@ -11,7 +11,8 @@ export default function Projects () {
         <Box
         sx={{
             backgroundColor: theme.palette.background.default,
-            height: "100vh",
+            height: "clamp(100vh, 100vh, 100000vh)", // High maximum to adapt to any project count
+            overflowX: "hidden",
             width: "100vw",
         }}
         >

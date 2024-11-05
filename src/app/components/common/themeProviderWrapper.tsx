@@ -8,7 +8,6 @@ import React from "react";
 
 export default function ThemeProviderWrapper({ children }: { children: React.ReactNode }) {
     const currentTheme = useCurrentTheme((state) => state.theme);
-
     return (
         <ThemeProvider theme={currentTheme === "light" ? lightTheme : darkTheme}>
             {children}
