@@ -37,13 +37,13 @@ export default function About() {
                 >
                     <Typography sx={{
                         fontFamily: "--font-montserrat",
-                        fontSize: "30px",
+                        fontSize: "clamp(20px, 40px, 100px)",
                         fontWeight: 500,
                         color: theme.palette.primary.main,
                     }}>Why Coffee?</Typography>
                     <Typography sx={{
                         fontFamily: "--font-montserrat",
-                        fontSize: "15px",
+                        fontSize: "clamp(10px, 25px, 100px)",
                         width: {
                             xs: "90vw",
                             sm: "70vw",
@@ -65,14 +65,14 @@ export default function About() {
                 >
                     <Typography sx={{
                         fontFamily: "--font-montserrat",
-                        fontSize: "30px",
+                        fontSize: "clamp(20px, 40px, 150px)",
                         fontWeight: 500,
                         color: theme.palette.primary.main,
                         marginTop: "5vh",
                     }}>What is built at Coffee?</Typography>
                     <Typography sx={{
                         fontFamily: "--font-montserrat",
-                        fontSize: "15px",
+                        fontSize: "clamp(10px, 25px, 100px)",
                         width: {
                             xs: "90vw",
                             sm: "70vw",

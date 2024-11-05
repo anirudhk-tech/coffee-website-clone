@@ -7,6 +7,7 @@ export const ProjectSection = ({ title, description}: { title: string, descripti
     const theme = useTheme();
     return (
         <Box
+        data-testid="project-section"
         sx={{
             height: 'fit-content',
             width: '100vw',
@@ -35,13 +36,7 @@ export const ProjectSection = ({ title, description}: { title: string, descripti
             >
                 <Typography sx={{
                     fontFamily: "--font-montserrat",
-                    fontSize: {
-                        xs: "20px",
-                        sm: "30px",
-                        md: "40px",
-                        lg: "50px",
-                        xl: "50px",
-                    },
+                    fontSize: "clamp(20px, 40px, 100px)",
                     fontWeight: 550,
                     color: theme.palette.primary.main,
                 }}>
@@ -68,13 +63,7 @@ export const ProjectSection = ({ title, description}: { title: string, descripti
         >
             <Typography sx={{
                 fontFamily: "--font-montserrat",
-                fontSize: {
-                    xs: "15px",
-                    sm: "15px",
-                    md: "30px",
-                    lg: "40px",
-                    xl: "40px",
-                },
+                fontSize: "clamp(10px, 25px, 100px)",
                 width: {
                     xs: "90vw",
                     sm: "70vw",

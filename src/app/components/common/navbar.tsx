@@ -19,7 +19,8 @@ export const Navbar = () => {
     LogoComponent.displayName = "LogoComponent"; // Setting display name to avoid ESlint error
 
     return (
-        <AppBar 
+        <AppBar
+        data-testid="navbar" 
         position="static"
         elevation={0}
         sx={{
