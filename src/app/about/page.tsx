@@ -19,6 +19,7 @@ export default function About() {
             backgroundColor: theme.palette.background.default,
             height: "100vh",
             width: "100vw",
+            overflow: "hidden",
         }}
         >
             <Navbar/>
