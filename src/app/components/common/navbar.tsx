@@ -31,6 +31,7 @@ export const Navbar = () => {
             paddingRight: "1vw",
             flexDirection: "row",
             alignItems: "center",
+            position: "sticky",
         }}
         >
            <LogoComponent/>
