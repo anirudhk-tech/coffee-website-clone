@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import ThemeProviderWrapper from "./components/common/themeProviderWrapper";
-
+import Head from "next/head";
 
 const Montserrat = localFont({
   src: "./fonts/Montserrat-Regular.ttf",
@@ -20,16 +20,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
     <html lang="en">
+      <Head>
+        <meta
+          name="google-site-verification"
+          content="VGG7Y5WfUTzlJAJIJIN-rOdlkasXNr6GcNRgLIJg26I"
+        />
+      </Head>
       <ThemeProviderWrapper>
-          <body
-            className={Montserrat.variable}
-          >
-            {children}
-          </body>
-        </ThemeProviderWrapper>
+        <body className={Montserrat.variable}>{children}</body>
+      </ThemeProviderWrapper>
     </html>
   );
 }
