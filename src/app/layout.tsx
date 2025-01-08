@@ -8,12 +8,15 @@ const Montserrat = localFont({
   variable: "--font-montserrat",
   weight: "100 900",
 });
-
+<meta
+  name="google-site-verification"
+  content="CHQFepqlAxdOM9OyjeUrk6sVPDuFc0FGKIHUj40s8PE"
+/>;
 export const metadata: Metadata = {
   title: "Coffee Software Website",
   description: "Website for Coffee - The software development company",
   verification: {
-    google: "VGG7Y5WfUTzlJAJIJIN-rOdlkasXNr6GcNRgLIJg26I",
+    google: "CHQFepqlAxdOM9OyjeUrk6sVPDuFc0FGKIHUj40s8PE",
   },
 };
 
